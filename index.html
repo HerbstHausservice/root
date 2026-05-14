@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herbst Hausservice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f7f7;
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg,#5c9f2f,#243b14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+    }
+
+    .logo h1 {
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #6baa37;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #6baa37;
+    }
+
+    .btn {
+      background: #6baa37;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn:hover {
+      background: #578a2f;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 80px 0;
+      background: linear-gradient(135deg,#ffffff,#edf4e6);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .badge {
+      color: #6baa37;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: 64px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+
+    .hero h2 span {
+      color: #6baa37;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .secondary-btn {
+      border: 2px solid #6baa37;
+      color: #6baa37;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 30px;
+      object-fit: cover;
+      min-height: 500px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .services {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #666;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .card h4 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 16px;
+      color: #555;
+    }
+
+    .card ul li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg,#18211a,#2f4425);
+      color: white;
+      padding: 80px 0;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 24px;
+    }
+
+    .highlight-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .highlight-card h5 {
+      font-size: 22px;
+      margin-top: 16px;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      padding: 80px 0;
+      background: #f2f5ef;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg,#243b14,#6baa37);
+      border-radius: 28px;
+      color: white;
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact h3 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: #101010;
+      color: #aaa;
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    @media(max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 48px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+
+    @media(max-width: 640px) {
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .contact-box {
+        padding: 36px;
+      }
+
+      .contact h3 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">
+      <div class="logo-icon">🏠</div>
+      <div>
+        <h1>HERBST</h1>
+        <span>HAUSSERVICE</span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#">Startseite</a>
+      <a href="#services">Leistungen</a>
+      <a href="#about">Über uns</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+
+    <a href="#contact" class="btn">📱 Jetzt anfragen</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">Ihr Partner im Siegerland</div>
+      <h2>Zuverlässig. <span>Sauber.</span> Fair.</h2>
+      <p>
+        Herbst Hausservice steht für professionelle Dienstleistungen rund um Entrümpelung,
+        Umzug, Haushaltsauflösung und Transporte.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">WhatsApp Anfrage</a>
+        <a href="#services" class="secondary-btn">Unsere Leistungen</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1400&auto=format&fit=crop" alt="Hausservice" />
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h3>Unsere Leistungen</h3>
+      <p>
+        Professionelle Unterstützung rund um Haus, Wohnung und Transporte.
+      </p>
+    </div>
+
+    <div class="service-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Entrümpelung">
+        <div class="card-content">
+          <h4>Entrümpelung</h4>
+          <p>Wohnungen, Keller und Häuser schnell und sauber räumen.</p>
+          <ul>
+            <li>✔ Keller & Dachboden</li>
+            <li>✔ Wohnungsauflösung</li>
+            <li>✔ Besenrein</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop" alt="Umzug">
+        <div class="card-content">
+          <h4>Umzug & Transport</h4>
+          <p>Professioneller Möbeltransport für Privat und Gewerbe.</p>
+          <ul>
+            <li>✔ Privat & Gewerbe</li>
+            <li>✔ Flexible Termine</li>
+            <li>✔ Sicher & pünktlich</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="Haushaltsauflösung">
+        <div class="card-content">
+          <h4>Haushaltsauflösung</h4>
+          <p>Komplette Auflösung mit fachgerechter Entsorgung.</p>
+          <ul>
+            <li>✔ Schnell</li>
+            <li>✔ Diskret</li>
+            <li>✔ Umweltgerecht</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop" alt="Entsorgung">
+        <div class="card-content">
+          <h4>Sperrmüll & Entsorgung</h4>
+          <p>Fachgerechte Entsorgung von Möbeln und Altlasten.</p>
+          <ul>
+            <li>✔ Sperrmüll</li>
+            <li>✔ Elektrogeräte</li>
+            <li>✔ Schrott</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="highlight">
+  <div class="container">
+    <div class="section-title">
+      <h3>Warum wir?</h3>
+      <p>Verlässlicher Partner für private und gewerbliche Aufträge.</p>
+    </div>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div style="font-size:42px;">⭐</div>
+        <h5>Zuverlässig</h5>
+        <p>Termintreu und professionell bei jedem Auftrag.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div style="font-size:42px;">🧹</div>
+        <h5>Sauber</h5>
+        <p>Besenreine Übergabe und ordentliche Arbeit.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div style="font-size:42px;">🤝</div>
+        <h5>Fair</h5>
+        <p>Transparente Preise ohne versteckte Kosten.</p>
+      </div>
+
+      <div class="highlight-card">
+        <div style="font-size:42px;">📍</div>
+        <h5>Regional</h5>
+        <p>Im Siegerland, Köln und Umgebung unterwegs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <h3>Lassen Sie uns gemeinsam anpacken!</h3>
+        <p>
+          Kontaktieren Sie uns jetzt kostenlos und unverbindlich.
+        </p>
+      </div>
+
+      <a href="tel:+4915112345678" class="btn">📞 Jetzt anrufen</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2025 Herbst Hausservice — Alle Rechte vorbehalten.
+  </div>
+</footer>
+
+</body>
+</html>
