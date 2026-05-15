@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Startseite | Herbst Hausservice</title>
+  <title>Kontakt | Herbst Hausservice</title>
   <meta name="description" content="Herbst Hausservice: Entrümpelung, Haushaltsauflösung, Umzug, Transport und Entsorgung im Siegerland, Köln und Umgebung.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page start">
-    <img class="design" src="assets/startseite.svg" alt="Startseite – Herbst Hausservice">
+  <main class="page contact">
+    <img class="design" src="assets/kontakt.svg" alt="Kontakt – Herbst Hausservice">
     
 <a class="hotspot logo-link" href="index.html">Herbst Hausservice Startseite</a>
 <a class="hotspot nav-home" href="index.html">Startseite</a>
@@ -27,11 +27,15 @@
 <a class="hotspot footer-sitemap" href="sitemap.html">Sitemap</a>
 
     
-<a class="hotspot service-link s1" href="leistungen.html#entruempelung">Entrümpelung</a>
-<a class="hotspot service-link s2" href="leistungen.html#haushaltsaufloesung">Haushaltsauflösung</a>
-<a class="hotspot service-link s3" href="leistungen.html#umzug-transport">Umzug und Transport</a>
-<a class="hotspot service-link s4" href="leistungen.html#kleintransporte">Kleintransporte</a>
-<a class="hotspot service-link s5" href="leistungen.html#entsorgung">Entsorgung</a>
+<form class="contact-form" id="contactForm">
+  <input name="name" type="text" placeholder="Ihr Name*" required aria-label="Ihr Name">
+  <input name="email" type="email" placeholder="Ihre E-Mail Adresse*" required aria-label="Ihre E-Mail Adresse">
+  <input name="phone" type="tel" placeholder="Telefonnummer" aria-label="Telefonnummer">
+  <input name="subject" type="text" placeholder="Betreff" aria-label="Betreff">
+  <textarea name="message" placeholder="Ihre Nachricht*" required aria-label="Ihre Nachricht"></textarea>
+  <label><input type="checkbox" required> Ich stimme der <a href="datenschutz.html">Datenschutzerklärung</a> zu.</label>
+  <button type="submit">✉ Nachricht senden</button>
+</form>
 
   </main>
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie Hinweis">
