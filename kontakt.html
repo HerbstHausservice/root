@@ -1,0 +1,205 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kontakt zu Herbst Hausservice: Fragen stellen, Angebot anfordern und schnell Rückmeldung erhalten."
+    />
+    <title>Kontakt | Herbst Hausservice</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body class="contact-page">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Herbst Hausservice Startseite">
+        <img class="brand-logo" src="./assets/exported-svg/icons/logo.svg" alt="Herbst Hausservice" />
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="./index.html">Startseite</a>
+        <a href="./leistungen.html">Leistungen</a>
+        <a href="./ueber-uns.html">Über uns</a>
+        <a class="is-active" href="./kontakt.html">Kontakt</a>
+      </nav>
+
+      <a class="button button-header" href="https://wa.me/4915172144553">
+        <img src="./assets/exported-svg/icons/Icon_WhatsApp_24.svg" alt="" />
+        Jetzt anfragen
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="overline">Kontakt</p>
+          <h1>Wir sind <span>für Sie</span> da.</h1>
+          <p>
+            Haben Sie Fragen oder möchten ein unverbindliches Angebot?
+            Kontaktieren Sie uns, wir melden uns schnellstmöglich bei Ihnen!
+          </p>
+          <div class="hero-actions contact-hero-actions">
+            <a class="button button-secondary" href="./ueber-uns.html">Über uns</a>
+            <a class="button button-secondary" href="./leistungen.html">Unsere Leistungen</a>
+          </div>
+          <ul class="slogan-list" aria-label="Kontaktvorteile">
+            <li><img src="./assets/exported-svg/icons/Icon_Haken_24.svg" alt="" />Schnelle Rückmeldung</li>
+            <li><img src="./assets/exported-svg/icons/Icon_Haken_24.svg" alt="" />Unverbindlich</li>
+            <li><img src="./assets/exported-svg/icons/Icon_Haken_24.svg" alt="" />Persönlich</li>
+          </ul>
+        </div>
+
+        <div class="hero-media" aria-label="Herbst Hausservice Kontakt">
+          <img src="./assets/images/kontakt.png" alt="Mitarbeiter von Herbst Hausservice vor Transporter" />
+        </div>
+      </section>
+
+      <section class="content-panel">
+        <div class="section-title contact-mobile-title">
+          <span></span>
+          <h2>So erreichen Sie uns</h2>
+          <span></span>
+        </div>
+
+        <a class="button button-primary contact-whatsapp" href="https://wa.me/4915172144553">
+          <img src="./assets/exported-svg/icons/Icon_WhatsApp_24.svg" alt="" />
+          über WhatsApp
+        </a>
+
+        <div class="contact-grid">
+          <section class="contact-form-card" aria-labelledby="contact-form-title">
+            <h2 id="contact-form-title">Schreiben Sie <span>uns</span></h2>
+            <form class="contact-form" id="contact-form" data-contact-form novalidate>
+              <div class="form-row">
+                <label>
+                  <span>Ihr Name *</span>
+                  <input type="text" name="name" placeholder="Ihr Name *" autocomplete="name" required />
+                </label>
+                <label>
+                  <span>Ihre E-Mail-Adresse *</span>
+                  <input type="email" name="email" placeholder="Ihre E-Mail-Adresse *" autocomplete="email" required />
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  <span>Telefonnummer</span>
+                  <input type="tel" name="telefon" placeholder="Telefonnummer" autocomplete="tel" />
+                </label>
+                <label>
+                  <span>Gewünschte Leistung</span>
+                  <select name="leistung">
+                    <option value="">Leistung auswählen</option>
+                    <option value="Entrümpelung">Entrümpelung</option>
+                    <option value="Haushaltsauflösung">Haushaltsauflösung</option>
+                    <option value="Umzug & Transport">Umzug & Transport</option>
+                    <option value="Kleintransporte">Kleintransporte</option>
+                    <option value="Sperrmüll & Entsorgung">Sperrmüll & Entsorgung</option>
+                    <option value="Sonstiges">Sonstiges</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                <span>Einsatzort</span>
+                <input type="text" name="ort" placeholder="Einsatzort, z. B. Siegen oder Köln" autocomplete="address-level2" />
+              </label>
+              <label>
+                <span>Betreff</span>
+                <input type="text" name="betreff" placeholder="Betreff" />
+              </label>
+              <label>
+                <span>Ihre Nachricht *</span>
+                <textarea name="nachricht" placeholder="Ihre Nachricht *" rows="6" required></textarea>
+              </label>
+              <label class="privacy-check">
+                <input type="checkbox" name="datenschutz" required />
+                <span>Ich stimme der <a href="./datenschutz.html">Datenschutzerklärung</a> zu.</span>
+              </label>
+              <label class="form-honeypot" aria-hidden="true">
+                <span>Bitte frei lassen</span>
+                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+              </label>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+              <button class="button button-primary" type="submit">
+                <img src="./assets/exported-svg/icons/Icon_Mail_32.svg" alt="" />
+                Nachricht senden
+              </button>
+            </form>
+          </section>
+
+          <section class="contact-map-card" aria-labelledby="contact-map-title">
+            <div class="map-visual" aria-hidden="true">
+              <div class="contact-round-image contact-round-cologne">
+                <img src="./assets/images/cologne.png" alt="" />
+              </div>
+              <div class="contact-region contact-region-siegerland">
+                <img src="./assets/exported-svg/icons/Icon_Pinnadel_32.svg" alt="" />
+                <strong>Siegerland &<br />Umgebung</strong>
+                <span class="region-place region-netphen">Netphen</span>
+                <span class="region-place region-wilnsdorf">Wilnsdorf</span>
+                <span class="region-place region-haiger">Haiger</span>
+              </div>
+              <div class="contact-region contact-region-cologne">
+                <img src="./assets/exported-svg/icons/Icon_Pinnadel_32.svg" alt="" />
+                <strong>Köln &<br />Umgebung</strong>
+                <span class="region-place region-duesseldorf">Duesseldorf</span>
+                <span class="region-place region-leverkusen">Leverkusen</span>
+                <span class="region-place region-pulheim">Pulheim</span>
+                <span class="region-place region-bonn">Bonn</span>
+              </div>
+              <div class="contact-round-image contact-round-siegerland">
+                <img src="./assets/images/siegen.png" alt="" />
+              </div>
+            </div>
+            <article class="contact-info-card">
+              <img src="./assets/exported-svg/icons/Icon_Pinnadel_32.svg" alt="" />
+              <h2 id="contact-map-title">Flexibel unterwegs</h2>
+              <p>Wir sind da, wo Sie uns brauchen. Sprechen Sie uns an!</p>
+            </article>
+          </section>
+        </div>
+
+        <section class="contact-bar" aria-label="Kontakt">
+          <div class="bar-copy">
+            <strong>Wir schaffen Platz für Neues!</strong>
+            <span>Ich freue mich auf Ihre Anfrage und berate Sie gerne persönlich.</span>
+          </div>
+          <a href="tel:+4915172144553">
+            <img src="./assets/exported-svg/icons/Icon_Telefon_24.svg" alt="" />
+            +49 1517 2144553
+          </a>
+          <a href="mailto:info@herbst-hausservice.de">
+            <img src="./assets/exported-svg/icons/Icon_Mail_32.svg" alt="" />
+            info@herbst-hausservice.de
+          </a>
+          <a class="button button-primary" href="https://wa.me/4915172144553">
+            <img src="./assets/exported-svg/icons/Icon_WhatsApp_24.svg" alt="" />
+            Jetzt anfragen
+          </a>
+        </section>
+
+        <section class="review-bar" aria-label="Google Bewertungen">
+          <h2>Das sagen unsere Kunden</h2>
+          <a class="button button-outline" href="#"><img src="./assets/exported-svg/icons/Icon_Google_24.svg" alt="" />Google Bewertung</a>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="./impressum.html">Impressum</a>
+      <a href="./datenschutz.html">Datenschutz</a>
+      <a href="./cookie-richtlinie.html">Cookie-Richtlinie</a>
+      <a href="./sitemap.html">Sitemap</a>
+    </footer>
+    <script src="./scripts/contact.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
